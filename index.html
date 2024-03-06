@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Workout Rounds App</title>
+</head>
+
+<body class="flex">
+  <i class="fas fa-heartbeat"></i>
+  <div class="workout-timer-container flex">
+    <header class="flex">
+      <h1 class="title">Workout Rounds Timer</h1>
+      <div class="inputs-container">
+        <div class="input-group flex">
+          <label class="roundTime">Round length</label>
+          <input type="number" id="roundTime" placeholder="minutes">
+        </div>
+        <div class="input-group flex">
+          <label class="restTime">Round length</label>
+          <input type="number" id="restTime" placeholder="minutes">
+        </div>
+        <button class="btn" id="start">Start</button>
+      </div>
+      <h4>Set the duration of Rounds and Rest Time</h4>
+      <h2 id="start-countdown"></h2>
+      <h2 id="displayTime"></h2>
+    </header>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
