@@ -49,9 +49,9 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type='number'] {
+/* input[type='number'] {
   -moz-appearance: textfield;
-}
+} */
 
 .workout-timer-container {
   width: 600px;
@@ -112,4 +112,20 @@ input#restTime:hover {
 }
 .btn:active {
   transform: scale(0.95);
+}
+
+#displayTime {
+  background-color: var(--bg-c-2);
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: inset 0 0 15px 3px;
+  color: var(--green);
+}
+
+.fa-solid {
+  font-size: 20rem;
+  position: absolute;
+  top: 10vh;
+  color: var(--red);
+  z-index: -1;
 }
