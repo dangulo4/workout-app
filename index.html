@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width= , initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/e58ed12b28.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-  <script src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <title>Workout Rounds App</title>
 </head>
 
 <body class="flex">
-  <i class="fas fa-heartbeat"></i>
+  <i class="fa-solid fa-dumbbell"></i>
   <div class="workout-timer-container flex">
     <header class="flex">
       <h1 class="title">Workout Rounds Timer</h1>
@@ -21,17 +21,44 @@
           <input type="number" id="roundTime" placeholder="minutes">
         </div>
         <div class="input-group flex">
-          <label class="restTime">Round length</label>
+          <label class="restTime">Rest length</label>
           <input type="number" id="restTime" placeholder="minutes">
         </div>
-        <button class="btn" id="start">Start</button>
+        <button class="btn" id="start" onclick="startTimer()">Start</button>
       </div>
       <h4>Set the duration of Rounds and Rest Time</h4>
       <h2 id="start-countdown"></h2>
       <h2 id="displayTime"></h2>
     </header>
-  </div>
 
+    <div class="rounds-container flex">
+      <section class="group flex">
+        <div class="round">Round 1</div>
+        <span class="round-time" id="round-1"></span>
+      </section>
+      <section class="group flex">
+        <div class="rest">Rest 1</div>
+        <span class="rest-time" id="rest-1"></span>
+      </section>
+      <section class="group flex">
+        <div class="round">Round 2</div>
+        <span class="round-time" id="round-2"></span>
+      </section>
+      <section class="group flex">
+        <div class="rest">Rest 2</div>
+        <span class="rest-time" id="rest-2"></span>
+      </section>
+      <section class="group flex">
+        <div class="round">Round 3</div>
+        <span class="round-time" id="round-3"></span>
+      </section>
+    </div>
+  </div>
+  <!-- audio alerts -->
+
+  <audio id="alert10sec" loop src="./audio/tensec.mp3"></audio>
+  <audio id="alertStop" loop src="./audio/stopround.mp3"></audio>
+  <audio id="alertStart" loop src="./audio/startroundbell.mp3"></audio>
   <script src="app.js"></script>
 </body>
 
