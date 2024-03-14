@@ -135,3 +135,21 @@ input#restTime:hover {
 .group {
   display: none;
 }
+.active {
+  font-size: 30vh;
+  display: flex;
+}
+.animateSeconds {
+  color: var(--red);
+  animation: animateTime 1s ease;
+}
+@keyframes animateTime {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

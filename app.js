@@ -28,6 +28,11 @@ const alertStart = document.getElementById('alertStart');
 const alertStop = document.getElementById('alertStop');
 
 const startTimer = () => {
+  // todo: time stamps
+  let roundTime = roundTimeInput.value * 60;
+  let restTime = restTimeInput.value * 60;
+  let time = '10';
+
   // todo: verify
   if (roundTimeInput.value === '' || restTimeInput.value === '') {
     alert('Enter Round and Rest Time');
@@ -40,6 +45,24 @@ const startTimer = () => {
 
     // todo alert 10 sec
     setAlert(alert10sec);
+
+    // todo: start countdown
+    const startCountDown = document.querySelector('.title');
+    setInterval(() => {
+      getReady(startCountDown);
+    }, 1000);
+
+    // create countdown
+    function getReady(el) {
+      let seconds = time % 60;
+      el.innerHTML = `
+      <div class='inputs-container flex'>
+        <h4 class='title'>Get Ready in</h4>
+        <h2 id='seconds' class='active animateSeconds'>${seconds}</h2>
+      </div>
+      `;
+      time--;
+    }
 
     // Interaction Alert
     function setAlert(alert) {
