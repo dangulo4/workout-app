@@ -70,10 +70,12 @@ h4 {
 .input-group {
   padding: 1rem;
 }
+
 label.roundTime {
   font-size: 1.1rem;
   color: var(--red);
 }
+
 label.restTime {
   font-size: 1.1rem;
   color: var(--light-blue);
@@ -84,21 +86,26 @@ input {
   max-width: 120px;
   text-align: center;
 }
+
 input:placeholder {
   color: #999;
 }
+
 input#roundTime {
   color: var(--red);
 }
+
 input#roundTime:hover {
   border-bottom: 1px solid var(--red);
 }
+
 input#restTime {
   color: var(--light-blue);
 }
 input#restTime:hover {
   border-bottom: 1px solid var(--light-blue);
 }
+
 .btn {
   height: 100px;
   width: 100px;
@@ -110,6 +117,7 @@ input#restTime:hover {
   box-shadow: 0 15px 10px #333;
   border: 2px solid #333;
 }
+
 .btn:active {
   transform: scale(0.95);
 }
@@ -118,7 +126,7 @@ input#restTime:hover {
   background-color: var(--bg-c-2);
   border-radius: 5px;
   padding: 1rem;
-  box-shadow: inset 0 0 15px 3px;
+  box-shadow: inset 0 0 15px 3px #333;
   color: var(--green);
 }
 .fa-solid {
@@ -128,17 +136,42 @@ input#restTime:hover {
   color: var(--red);
   z-index: -1;
 }
+
+.fa-hand-fist {
+  color: var(--orange);
+}
+
+.fa-bottle-water {
+  color: var(--blue);
+}
+
 .group {
   height: 100vh;
   justify-content: space-evenly;
 }
+
 .group {
   display: none;
 }
+
 .active {
   font-size: 30vh;
   display: flex;
 }
+
+.active > .round,
+.active > .rest {
+  font-size: 10vh;
+}
+
+.round-time,
+.rest-time {
+  background-color: var(--bg-c-2);
+  border-radius: 5px;
+  box-shadow: 0 15px 10px #333;
+  transition: all 0.2s ease;
+}
+
 .animateSeconds {
   color: var(--red);
   animation: animateTime 1s ease;
